@@ -29,7 +29,15 @@ if __name__ == '__main__':
             season = input()
             scores.get_current_scores(week, season)
         elif user == '4':
-            print("\n\tNot available yet")
+            print(f"\nWhich week and season would you like to view?")
+            print(f"Week: ", end="")
+            week = input()
+            print("Season: ", end="")
+            season = input()
+            print(f"Which Game would you like: ", end="")
+            team = input()
+            team = names.change_name(team)
+            scores.get_player_stats(week, season, team)
         else:
             print("\n\tNot valid input")
         probe = '''
